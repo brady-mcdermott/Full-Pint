@@ -50,9 +50,9 @@ function popupclose() {
 }
 
 function canhover(element, beer) {
-    element.src = "Images/"+beer+".gif";
+    element.src = "/Images/"+beer+".gif";
 }
 
 function cannohover(element, beer) {
-    element.src = "Images/"+beer+".png";
+    element.src = "/Images/"+beer+".png";
 }
