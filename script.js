@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    alert("HE");
+    $(window).alert("HE");
     var styleElem = document.head.appendChild(document.createElement("style"));
 
     $(window).scroll(function () {
