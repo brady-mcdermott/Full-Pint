@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    alert("HE");
     var styleElem = document.head.appendChild(document.createElement("style"));
 
     $(window).scroll(function () {
