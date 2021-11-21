@@ -5,4 +5,4 @@ View this as a full site at https://htmlpreview.github.io/?https://github.com/Bo
 
 > Note: JavaScript cannot properly compile in GitHub htmlpreview. If you wish to view with JS intact, simply clone directory.
 > 
->       Links in nav are not associated with GitHub htmlpreivew. They will relocate to a RAW html view of the site if used.
+> Links in nav are not associated with GitHub htmlpreivew. They will relocate to a RAW html view of the site if used.
