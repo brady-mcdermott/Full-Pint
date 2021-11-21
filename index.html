@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<charset="utf-8">
+
+    <head>
+        <title>Full Pint Beer</title>
+        <link rel="stylesheet" type="text/css" href="theme.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Do+Hyeon&family=Staatliches&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Norican&family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Cormorant+Garamond:wght@600&display=swap"
+            rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <script src="ScrollMagic.min.js"></script>
+        <script src="plugins/debug.addIndicators.min.js"></script>
+
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    </head>
+
+    <body>
+        <div id="overlay" class=""></div>
+        <div id="beerpopupwrapper" class="">
+            <img src="" alt="" width="300px" height="650" id="popupimage">
+            <div id="popuptextwrapper">
+                <h3 id="chintitle" class="">CHINOOKIE IPA</h3>
+                <h3 id="clearlytitle" class="">CLEARLY CLOUDY</h3>
+                <h3 id="whitetitle" class="">WHITE LIGHTNING</h3>
+
+                <h4 id="chintext" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
+                <h4 id="clearlytext" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
+                <h4 id="whitetext" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
+
+                <div id="popupfacts">
+                    <div id="alcpercent">
+                        <h5 id="percenttext" class="factslabel">Alc Percent</h5>
+                        <h3 id="clearlypercent" class="fact">7.1%</h3>
+                        <h3 id="whitepercent" class="fact">6%</h3>
+                        <h3 id="chinpercent" class="fact">7.1%</h3>
+                        <h5 id="inline">Inline</h5>
+                    </div>
+                    <div id="og">
+                        <h5 id="ogtext" class="factslabel">O.G.</h5>
+                        <h3 id="clearlyog" class="fact">16.5</h3>
+                        <h3 id="whiteog" class="fact">13.5</h3>
+                        <h3 id="chinog" class="fact">15.1</h3>
+                        <h5 id="ogmeaning">(Original Gravity)</h5>
+                    </div>
+                    <div id="ibu">
+                        <h5 id="ibutext" class="factslabel">IBU</h5>
+                        <h3 id="clearlyibu" class="fact">10</h3>
+                        <h3 id="whiteibu" class="fact">18</h3>
+                        <h3 id="chinibu" class="fact">100+</h3>
+                        <h5 id="ibumeaning">(International Bitterness Units)</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="popupclose" id="closeclearly" onclick="javascript:popupclose()">
+                <div id="outer">
+                    <div id="inner">
+                        <label>close</label>
+                    </div>
+                </div>
+            </div>
+            <div class="popupclose" id="closewhite" onclick="javascript:popupclose()">
+                <div id="outer">
+                    <div id="inner">
+                        <label>close</label>
+                    </div>
+                </div>
+            </div>
+            <div class="popupclose" id="closechin" onclick="javascript:popupclose()">
+                <div id="outer">
+                    <div id="inner">
+                        <label>close</label>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="contentwrap">
+            <div id="toparea">
+                <h1 id="topfull">Full</h1>
+                <h1 id="toppint"> Pint</h1>
+                <h4 id="topready">Are you ready Pittsburgh?</h4>
+                <img src="Images/topbackground.jpg" alt="Glass of Beer" id="topbackground" height="560px">
+                <span id="pghcircle">
+                    <p>PGH&#183;PA</p>
+                </span>
+                <div id="headerwrap">
+
+
+                    <div id="logowrap">
+                        <img src="C:/Users/17249/Desktop/Full Pint/Images/Logo.png" alt="Full Pint Logo" width="60"
+                            height="100" id="fullpintlogo">
+                    </div>
+                    <!-- <div id="linkwrap">
+                        <a href="https://www.facebook.com/fullpintbeer/" target="_blank" logolink"><img
+                                src="C:/Users/17249/Desktop/Full Pint/Images/facebook-icon.png" alt="d"></a>
+                        <a href="https://www.instagram.com/fullpintbeer/" target="_blank" class="logolink"><img
+                                src="C:/Users/17249/Desktop/Full Pint/Images/instagram-icon.png" alt="f"></a>
+                        <a href="https://twitter.com/fullpintbeerpgh/" target="_blank" class="logolink"><img
+                                src="C:/Users/17249/Desktop/Full Pint/Images/twitter-icon.png" alt="x"></a>
+                    </div> -->
+
+
+                    <!-- <p id="titletext"><span id="full">Full</span><span id="pint">Pint</span><span
+                        id="reg">&#174;</span><span id="beer">&ensp;BEER</span></p>
+                <span id="pghcircle">
+                    <p>PGH&#183;PA</p>
+                </span> -->
+
+                    <div id="nav">
+                        <a href="#" class="navlink">HOME</a>
+                        <a href="#" class="navlink">FIND OUR PRODUCT</a>
+                        <a href="#" class="navlink">FOLLOW US</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="productoutsidewrapper">
+                <h3 id="producttitle">OUR PRODUCTS</h3>
+                <div id="productinsidewrapper">
+                    <div id="clearlywrapper">
+                        <div class="beerslot">
+                            <img src="Images/clearly.png" alt="Clearly Can" width="190px" height="380px"
+                                onmouseover="javascript:canhover(this, 'clearly')"
+                                onmouseout="javascript:cannohover(this, 'clearly')">
+                            <h4 class="beername">Clearly Cloudy</h4>
+                            <h5 class="beerinfo" onclick="javascript:moreinfo('clearly')">MORE INFO</h5>
+                        </div>
+                    </div>
+
+                    <div id="whitewrapper">
+                        <div class="beerslot">
+                            <img src="Images/white.png" alt="White Can" width="190px" height="380px"
+                                onmouseover="javascript:canhover(this, 'white')"
+                                onmouseout="javascript:cannohover(this, 'white')">
+                            <h4 class="beername">White Lightning</h4>
+                            <h5 class="beerinfo" onclick="javascript:moreinfo('white')">MORE INFO</h5>
+                        </div>
+                    </div>
+
+                    <div id="chinwrapper">
+                        <div class="beerslot">
+                            <img src="Images/chin.png" alt="Chinookie Can" width="190px" height="380px"
+                                onmouseover="javascript:canhover(this, 'chin')"
+                                onmouseout="javascript:cannohover(this, 'chin')" )>
+                            <h4 class="beername">Chinookie IPA</h4>
+                            <h5 class="beerinfo" onclick="javascript:moreinfo('chin')">MORE INFO</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

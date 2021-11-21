@@ -1,0 +1,482 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font: Arial 14px;
+    background-color: #fff;
+    height: 200em;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #d4d4d4;
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+    z-index: 101;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s linear;
+}
+
+#overlay.show {
+    opacity: .9;
+    visibility: visible;
+    z-index: 101;
+}
+
+#beerpopupwrapper {
+    display: none;
+    position: fixed;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 5% 15%;
+    z-index: 102;
+}
+
+#beerpopupwrapper.show {
+    display: flex;
+}
+
+#popuptextwrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: left;
+    text-align: left;
+    width: 25em;
+}
+
+#popuptextwrapper #chintitle, #clearlytitle, #whitetitle {
+    color: black;
+    font-size: 2.5em;
+    font-family: "Do Hyeon", sans-serif;
+    display: none;
+    order: 0;
+}
+
+#popuptextwrapper #chintitle.show, #clearlytitle.show, #whitetitle.show {
+    display: block;
+}
+
+#popuptextwrapper #chintext, #clearlytext, #whitetext {
+    color: black;
+    font-size: 1.5em;
+    font-family: "Do Hyeon", sans-serif;
+    display: none;
+    order: 1;
+    width: 22em;
+}
+
+#popuptextwrapper #chintext.show, #clearlytext.show, #whitetext.show {
+    display: block;
+}
+
+#whitetext {
+    color: #0A1445;
+}
+
+#chintext {
+    color: #C3C73D;
+}
+
+#clearlytext {
+    color: #658DAF;
+}
+
+/* _______________________POPUP FACTS ___________________________ */
+
+#popupfacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: middle;
+    order: 2;
+    text-align: center;
+    height: 5em;
+    width: 40em;
+}
+
+#popupfacts #clearlypercent, #whitepercent, #chinpercent {
+    color: black;
+    font-size: 1.5em;
+    font-family: "Do Hyeon", sans-serif;
+    display: none;
+}
+
+#popupfacts #clearlyog, #whiteog, #chinog {
+    color: black;
+    font-size: 1.5em;
+    font-family: "Do Hyeon", sans-serif;
+    display: none;
+}
+
+#popupfacts #clearlyibu, #whiteibu, #chinibu {
+    color: black;
+    font-size: 1.5em;
+    font-family: "Do Hyeon", sans-serif;
+    display: none;
+}
+
+#popupfacts h3 {
+    margin-top: 1.5em;
+}
+
+#popupfacts .factslabel {
+    color: black;
+    font-size: 1.3em;
+    font-family: "Do Hyeon", sans-serif;
+    position: relative;
+    top: 1.2em;
+}
+
+#popupfacts #clearlypercent.show, #whitepercent.show, #chinpercent.show {
+    display: block;
+}
+
+#popupfacts #clearlyog.show, #whiteog.show, #chinog.show {
+    display: block;
+}
+
+#popupfacts #clearlyibu.show, #whiteibu.show, #chinibu.show {
+    display: block;
+}
+
+#popupfacts #alcpercent, #og, #ibu {
+    height: 1em;
+    padding-top: 1em;
+}
+
+#popupfacts #alcpercent {
+    order: 0;
+    width: 10em;
+}
+
+#popupfact .fact {
+    font-size: 2em;
+}
+
+#popupfacts h5 {
+    margin-top: -2em;
+    padding: 0;
+}
+
+#popupfacts #alcpercent #inline {
+    visibility: hidden;
+}
+
+#popupfacts #og {
+    order: 1;
+    width: 15em;
+}
+
+#popupfacts #ibu {
+    order: 2;
+    width: 25em;
+}
+
+.popupclose {
+    position: absolute;
+    top: 0;
+    left: 120%;
+    z-index: 102;
+    display: none;
+}
+
+.popupclose.show {
+    display: block;
+}
+
+.popupclose #outer {
+    position: relative;
+    margin: auto;
+    width: 70px;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.popupclose #inner {
+    width: inherit;
+    text-align: center;
+}
+
+.popupclose label {
+    font-size: 0.8em;
+    line-height: 4em;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all 0.3s ease-in;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.popupclose #inner:before, #inner:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: inherit;
+    background: #000;
+    left: 0;
+    transition: all 0.3s ease-in;
+}
+
+.popupclose #inner:before {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.popupclose #inner:after {
+    bottom: 50%;
+    transform: rotate(-45deg);
+}
+
+.popupclose #outer:hover label {
+    opacity: 1;
+}
+
+.popupclose #outer:hover #inner:before, .popupclose #outer:hover #inner:after {
+    transform: rotate(0);
+    background: #FFC107;
+}
+
+.popupclose #outer:hover #inner:before {
+    top: 100%;
+}
+
+.popupclose #outer:hover #inner:after {
+    bottom: 100%;
+}
+
+#closeclearly.show {
+    display: block;
+}
+
+/* ____________________________________________________________ */
+
+#contentwrap {
+    width: 100%;
+}
+
+#headerwrap {
+    position: fixed;
+    width: 95%;
+    left: 2%;
+    top: 3em;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+#toparea {
+    width: 100%;
+    height: 40em;
+    background-color: black;
+    z-index: 99;
+}
+
+#toparea #topbackground {
+    width: 50%;
+    height: 40em;
+    float: right;
+}
+
+#toparea #topfull {
+    position: absolute;
+    top: 0em;
+    left: 1.5em;
+    font-family: 'Norican', cursive;
+    color: white;
+    font-size: 10em;
+    width: 1em;
+}
+
+#toparea #toppint {
+    position: absolute;
+    top: 2em;
+    left: 2.5em;
+    font-family: 'Norican', cursive;
+    color: rgb(255, 196, 0);
+    font-size: 10em;
+    width: 1em;
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+}
+
+#toparea #pghcircle {
+    order: 2;
+    display: table;
+    border: 5px solid white;
+    border-radius: 50%;
+    /* box-shadow: inset 0 0 0 8px white, inset 0 0 0 10px black; */
+    /* And so on and so forth, if you want border-ception */
+    margin: 0 auto;
+    width: 5em;
+    height: 2em;
+    position: absolute;
+    top: 11.5em;
+    left: 23em;
+    font-size: 2em;
+    font-family: 'Do Hyeon', sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+#toparea #pghcircle p {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#toparea #topready {
+    position: absolute;
+    top: 12.5em;
+    left: 7em;
+    font-family: 'Do Hyeon', sans-serif;
+    color: #fff;
+    font-size: 2.5em;
+    width: 15em;
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+}
+
+#logowrap {
+    order: 0;
+}
+
+#nav {
+    order: 1;
+    margin-bottom: 4em;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.navlink {
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.3em;
+    color: #fff;
+    margin: 0 1em;
+}
+
+.black.navlink {
+    color: #000;
+}
+
+.navlink::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+}
+
+.black.navlink::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+}
+
+.navlink:hover::before {
+    transform: scaleX(1);
+}
+
+#productoutsidewrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5em;
+    height: 40em;
+    background-image: url("Images/product_background.png");
+    background-position-y: -3em;
+    background-position-x: -38em;
+    background-size: 175% 90%;
+    background-repeat: no-repeat;
+}
+
+#producttitle {
+    font-size: 2.5em;
+    color: #2c2c2c;
+    font-family: 'Do Hyeon', sans-serif;
+    margin-bottom: 2.5em;
+}
+
+#productinsidewrapper {
+    order: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #2c2c2c;
+    width: 80%;
+}
+
+#clearlywrapper {
+    order: 0;
+}
+
+#whitewrapper {
+    order: 1;
+}
+
+#chinwrapper {
+    order: 2;
+}
+
+.beerslot {
+    align-items: center;
+    text-align: center;
+}
+
+.beerslot img {
+    margin: 0;
+    padding: 0;
+}
+
+.beername {
+    font-size: 1.3em;
+    font-family: 'Do Hyeon', sans-serif;
+    letter-spacing: 0.1em;
+    margin: 0;
+    padding: 0;
+}
+
+.beerinfo {
+    cursor: pointer;
+}
+
+.beerinfo:hover {
+    text-decoration: underline;
+}
