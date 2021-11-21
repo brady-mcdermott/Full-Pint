@@ -19,7 +19,7 @@ $(document).ready(function () {
     
 });
 
-function moreinfo(beer) {
+window.moreinfo = function moreinfo(beer) {
     var overlay = document.getElementById("overlay");
     var popupwrap = document.getElementById("beerpopupwrapper");
     var popupimage = document.getElementById("popupimage");
@@ -42,7 +42,7 @@ function moreinfo(beer) {
     popupimage.src = "./Images/"+beer+".png";
 }
 
-function popupclose() {
+window.popupclose = function popupclose() {
     var overlay = document.getElementById("overlay");
     var popupwrap = document.getElementById("beerpopupwrapper");
 
@@ -50,10 +50,10 @@ function popupclose() {
     popupwrap.className = "";
 }
 
-function canhover(element, beer) {
+window.canhover = function canhover(element, beer) {
     element.src = "./Images/"+beer+".gif";
 }
 
-function cannohover(element, beer) {
+window.cannohover = function cannohover(element, beer) {
     element.src = "./Images/"+beer+".png";
 }
